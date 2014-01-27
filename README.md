@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 panya: computer vision tracking project for experimental rats
 
 An interface to track the movements of laboratory animals for experimental purposes.
@@ -49,6 +48,4 @@ Video file showing chosen pixels (if 'v' options selected)
 =======
 panya
 =====
-
 panya: visual tracking for experimental animals
->>>>>>> a36142c9e5a2540c7ebcadf2038d1b0783716e74
