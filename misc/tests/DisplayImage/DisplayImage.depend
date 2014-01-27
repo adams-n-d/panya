@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1381241175 source:/home/nda/code/sweng/DisplayImage/DisplayImage.cpp
+	<stdio.h>
+	<opencv2/opencv.hpp>
+
+<<<<<<< local
+1382550949 source:/home/xiahong/VidTrack/tests/DisplayImage/DisplayImage.cpp
+=======
+1381241175 source:/home/nda/code/sweng/tests/DisplayImage/DisplayImage.cpp
+>>>>>>> other
+	<stdio.h>
+	<opencv2/opencv.hpp>
+

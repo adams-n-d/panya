@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="vidtrackgui" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/vidtrackgui" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="/usr/local/include/opencv" />
+					<Add directory="/usr/local/include/opencv2" />
+				</Compiler>
+				<Linker>
+					<Add library="/usr/local/lib/libavcodec.a" />
+					<Add library="/usr/local/lib/libavcodec.so" />
+					<Add library="/usr/local/lib/libavdevice.a" />
+					<Add library="/usr/local/lib/libavdevice.so" />
+					<Add library="/usr/local/lib/libavfilter.a" />
+					<Add library="/usr/local/lib/libavfilter.so" />
+					<Add library="/usr/local/lib/libavformat.a" />
+					<Add library="/usr/local/lib/libavformat.so" />
+					<Add library="/usr/local/lib/libavutil.a" />
+					<Add library="/usr/local/lib/libavutil.so" />
+					<Add library="/usr/local/lib/libopencv_calib3d.so" />
+					<Add library="/usr/local/lib/libopencv_contrib.so" />
+					<Add library="/usr/local/lib/libopencv_core.so" />
+					<Add library="/usr/local/lib/libopencv_features2d.so" />
+					<Add library="/usr/local/lib/libopencv_flann.so" />
+					<Add library="/usr/local/lib/libopencv_gpu.so" />
+					<Add library="/usr/local/lib/libopencv_highgui.so" />
+					<Add library="/usr/local/lib/libopencv_imgproc.so" />
+					<Add library="/usr/local/lib/libopencv_legacy.so" />
+					<Add library="/usr/local/lib/libopencv_ml.so" />
+					<Add library="/usr/local/lib/libopencv_nonfree.so" />
+					<Add library="/usr/local/lib/libopencv_objdetect.so" />
+					<Add library="/usr/local/lib/libopencv_photo.so" />
+					<Add library="/usr/local/lib/libopencv_stitching.so" />
+					<Add library="/usr/local/lib/libopencv_superres.so" />
+					<Add library="/usr/local/lib/libopencv_ts.so" />
+					<Add library="/usr/local/lib/libopencv_video.so" />
+					<Add library="/usr/local/lib/libopencv_videostab.so" />
+					<Add library="/usr/local/lib/libpostproc.a" />
+					<Add library="/usr/local/lib/libpostproc.so" />
+					<Add library="/usr/local/lib/libswresample.a" />
+					<Add library="/usr/local/lib/libswresample.so" />
+					<Add library="/usr/local/lib/libswscale.a" />
+					<Add library="/usr/local/lib/libswscale.so" />
+					<Add library="/usr/local/lib/libv4l1.a" />
+					<Add library="/usr/local/lib/libv4l1.so" />
+					<Add library="/usr/local/lib/libv4l2.a" />
+					<Add library="/usr/local/lib/libv4l2.so" />
+					<Add library="/usr/local/lib/libv4l2rds.a" />
+					<Add library="/usr/local/lib/libv4l2rds.so" />
+					<Add library="/usr/local/lib/libv4lconvert.a" />
+					<Add library="/usr/local/lib/libv4lconvert.so" />
+					<Add library="/usr/local/lib/libwx_base-2.8.so" />
+					<Add library="/usr/local/lib/libwx_base_net-2.8.so" />
+					<Add library="/usr/local/lib/libwx_base_xml-2.8.so" />
+					<Add library="/usr/local/lib/libwx_gtk2_adv-2.8.so" />
+					<Add library="/usr/local/lib/libwx_gtk2_aui-2.8.so" />
+					<Add library="/usr/local/lib/libwx_gtk2_core-2.8.so" />
+					<Add library="/usr/local/lib/libwx_gtk2_html-2.8.so" />
+					<Add library="/usr/local/lib/libwx_gtk2_qa-2.8.so" />
+					<Add library="/usr/local/lib/libwx_gtk2_richtext-2.8.so" />
+					<Add library="/usr/local/lib/libwx_gtk2_xrc-2.8.so" />
+					<Add library="/usr/local/lib/v4l1compat.so" />
+					<Add library="/usr/local/lib/v4l2convert.so" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/vidtrackgui" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="`wx-config --cflags`" />
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add option="`wx-config --libs`" />
+		</Linker>
+		<Unit filename="vidtrackguiApp.cpp" />
+		<Unit filename="vidtrackguiApp.h" />
+		<Unit filename="vidtrackguiMain.cpp" />
+		<Unit filename="vidtrackguiMain.h" />
+		<Unit filename="../../vidtrack/project_IO.hpp" />
+		<Unit filename="../../vidtrack/trackingMethods.hpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

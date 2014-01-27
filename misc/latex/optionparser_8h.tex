@@ -1,0 +1,207 @@
+\hypertarget{optionparser_8h}{\section{optionparser.\-h \-File \-Reference}
+\label{optionparser_8h}\index{optionparser.\-h@{optionparser.\-h}}
+}
+
+
+\-This is the only file required to use \-The \-Lean \-Mean \-C++ \-Option \-Parser. \-Just \#include it and you're set.  
+
+
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structoption_1_1_descriptor}{option\-::\-Descriptor}
+\begin{DoxyCompactList}\small\item\em \-Describes an option, its help text (usage) and how it should be parsed. \end{DoxyCompactList}\item 
+class \hyperlink{classoption_1_1_option}{option\-::\-Option}
+\begin{DoxyCompactList}\small\item\em \-A parsed option from the command line together with its argument if it has one. \end{DoxyCompactList}\item 
+struct \hyperlink{structoption_1_1_arg}{option\-::\-Arg}
+\begin{DoxyCompactList}\small\item\em \-Functions for checking the validity of option arguments. \end{DoxyCompactList}\item 
+struct \hyperlink{structoption_1_1_stats}{option\-::\-Stats}
+\begin{DoxyCompactList}\small\item\em \-Determines the minimum lengths of the buffer and options arrays used for \hyperlink{classoption_1_1_parser}{\-Parser}. \end{DoxyCompactList}\item 
+class \hyperlink{classoption_1_1_parser}{option\-::\-Parser}
+\begin{DoxyCompactList}\small\item\em \-Checks argument vectors for validity and parses them into data structures that are easier to work with. \end{DoxyCompactList}\item 
+struct \hyperlink{structoption_1_1_parser_1_1_action}{option\-::\-Parser\-::\-Action}
+\item 
+class \hyperlink{classoption_1_1_stats_1_1_count_options_action}{option\-::\-Stats\-::\-Count\-Options\-Action}
+\item 
+class \hyperlink{classoption_1_1_parser_1_1_store_option_action}{option\-::\-Parser\-::\-Store\-Option\-Action}
+\item 
+struct \hyperlink{structoption_1_1_print_usage_implementation}{option\-::\-Print\-Usage\-Implementation}
+\item 
+struct \hyperlink{structoption_1_1_print_usage_implementation_1_1_i_string_writer}{option\-::\-Print\-Usage\-Implementation\-::\-I\-String\-Writer}
+\item 
+struct \hyperlink{structoption_1_1_print_usage_implementation_1_1_function_writer}{option\-::\-Print\-Usage\-Implementation\-::\-Function\-Writer$<$ Function $>$}
+\item 
+struct \hyperlink{structoption_1_1_print_usage_implementation_1_1_o_stream_writer}{option\-::\-Print\-Usage\-Implementation\-::\-O\-Stream\-Writer$<$ O\-Stream $>$}
+\item 
+struct \hyperlink{structoption_1_1_print_usage_implementation_1_1_temporary_writer}{option\-::\-Print\-Usage\-Implementation\-::\-Temporary\-Writer$<$ Temporary $>$}
+\item 
+struct \hyperlink{structoption_1_1_print_usage_implementation_1_1_syscall_writer}{option\-::\-Print\-Usage\-Implementation\-::\-Syscall\-Writer$<$ Syscall $>$}
+\item 
+struct \hyperlink{structoption_1_1_print_usage_implementation_1_1_stream_writer}{option\-::\-Print\-Usage\-Implementation\-::\-Stream\-Writer$<$ Function, Stream $>$}
+\item 
+class \hyperlink{classoption_1_1_print_usage_implementation_1_1_line_part_iterator}{option\-::\-Print\-Usage\-Implementation\-::\-Line\-Part\-Iterator}
+\item 
+class \hyperlink{classoption_1_1_print_usage_implementation_1_1_line_wrapper}{option\-::\-Print\-Usage\-Implementation\-::\-Line\-Wrapper}
+\end{DoxyCompactItemize}
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceoption}{option}
+\begin{DoxyCompactList}\small\item\em \-The namespace of \-The \-Lean \-Mean \-C++ \hyperlink{classoption_1_1_option}{\-Option} \hyperlink{classoption_1_1_parser}{\-Parser}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \-Arg\-Status($\ast$ \hyperlink{namespaceoption_a4afb7f04597f34439679509baf4b6d39}{option\-::\-Check\-Arg} )(const \-Option \&option, bool msg)
+\begin{DoxyCompactList}\small\item\em \-Signature of functions that check if an argument is valid for a certain type of option. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9}{option\-::\-Arg\-Status} \{ \hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9a353903b042e8eb0aa2f60c0043a58a7e}{option\-::\-A\-R\-G\-\_\-\-N\-O\-N\-E}, 
+\hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9a445e08cb1747e5a22929e7ef2da43b55}{option\-::\-A\-R\-G\-\_\-\-O\-K}, 
+\hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9a83e0837c79c957525918111d33cab3a9}{option\-::\-A\-R\-G\-\_\-\-I\-G\-N\-O\-R\-E}, 
+\hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9a9528e32563b795bd2930b12d0a5e382d}{option\-::\-A\-R\-G\-\_\-\-I\-L\-L\-E\-G\-A\-L}
+ \}
+\begin{DoxyCompactList}\small\item\em \-Possible results when checking if an argument is valid for a certain option. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename O\-Stream $>$ }\\void \hyperlink{namespaceoption_afc8bb7e040a98a0b33ff1ce9da1be0d1}{option\-::print\-Usage} (\-O\-Stream \&prn, const \-Descriptor usage\mbox{[}$\,$\mbox{]}, int width=80, int last\-\_\-column\-\_\-min\-\_\-percent=50, int last\-\_\-column\-\_\-own\-\_\-line\-\_\-max\-\_\-percent=75)
+\begin{DoxyCompactList}\small\item\em \-Outputs a nicely formatted usage string with support for multi-\/column formatting and line-\/wrapping. \end{DoxyCompactList}\item 
+\hypertarget{namespaceoption_a846de0735717c8402b76d14f0a7a4430}{{\footnotesize template$<$typename Function $>$ }\\void {\bfseries option\-::print\-Usage} (\-Function $\ast$prn, const \-Descriptor usage\mbox{[}$\,$\mbox{]}, int width=80, int last\-\_\-column\-\_\-min\-\_\-percent=50, int last\-\_\-column\-\_\-own\-\_\-line\-\_\-max\-\_\-percent=75)}\label{namespaceoption_a846de0735717c8402b76d14f0a7a4430}
+
+\item 
+\hypertarget{namespaceoption_a86e12a019c4da81e5031901af9c800cc}{{\footnotesize template$<$typename Temporary $>$ }\\void {\bfseries option\-::print\-Usage} (const \-Temporary \&prn, const \-Descriptor usage\mbox{[}$\,$\mbox{]}, int width=80, int last\-\_\-column\-\_\-min\-\_\-percent=50, int last\-\_\-column\-\_\-own\-\_\-line\-\_\-max\-\_\-percent=75)}\label{namespaceoption_a86e12a019c4da81e5031901af9c800cc}
+
+\item 
+\hypertarget{namespaceoption_a84764f72d05ba8480143043e3d56ad6a}{{\footnotesize template$<$typename Syscall $>$ }\\void {\bfseries option\-::print\-Usage} (\-Syscall $\ast$prn, int fd, const \-Descriptor usage\mbox{[}$\,$\mbox{]}, int width=80, int last\-\_\-column\-\_\-min\-\_\-percent=50, int last\-\_\-column\-\_\-own\-\_\-line\-\_\-max\-\_\-percent=75)}\label{namespaceoption_a84764f72d05ba8480143043e3d56ad6a}
+
+\item 
+\hypertarget{namespaceoption_a27bfa29dc37bb1bfc5e0b891509e5881}{{\footnotesize template$<$typename Function , typename Stream $>$ }\\void {\bfseries option\-::print\-Usage} (\-Function $\ast$prn, \-Stream $\ast$stream, const \-Descriptor usage\mbox{[}$\,$\mbox{]}, int width=80, int last\-\_\-column\-\_\-min\-\_\-percent=50, int last\-\_\-column\-\_\-own\-\_\-line\-\_\-max\-\_\-percent=75)}\label{namespaceoption_a27bfa29dc37bb1bfc5e0b891509e5881}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This is the only file required to use \-The \-Lean \-Mean \-C++ \-Option \-Parser. \-Just \#include it and you're set. \-The \-Lean \-Mean \-C++ \-Option \-Parser handles the program's command line arguments (argc, argv). \-It supports the short and long option formats of getopt(), getopt\-\_\-long() and getopt\-\_\-long\-\_\-only() but has a more convenient interface. \-The following features set it apart from other option parsers\-:
+
+\begin{DoxyParagraph}{\-Highlights\-:}
+
+\begin{DoxyItemize}
+\item \-It is a header-\/only library. \-Just {\ttfamily \#include \char`\"{}optionparser.\-h\char`\"{}} and you're set. 
+\item \-It is freestanding. \-There are no dependencies whatsoever, not even the \-C or \-C++ standard library. 
+\item \-It has a usage message formatter that supports column alignment and line wrapping. \-This aids localization because it adapts to translated strings that are shorter or longer (even if they contain \-Asian wide characters). 
+\item \-Unlike getopt() and derivatives it doesn't force you to loop through options sequentially. \-Instead you can access options directly like this\-: 
+\begin{DoxyItemize}
+\item \-Test for presence of a switch in the argument vector\-: 
+\begin{DoxyCode}
+ if ( options[QUIET] ) ... 
+\end{DoxyCode}
+ 
+\item \-Evaluate -\/-\/enable-\/foo/-\/-\/disable-\/foo pair where the last one used wins\-: 
+\begin{DoxyCode}
+ if ( options[FOO].last()->type() == DISABLE ) ... 
+\end{DoxyCode}
+ 
+\item \-Cumulative option (-\/v verbose, -\/vv more verbose, -\/vvv even more verbose)\-: 
+\begin{DoxyCode}
+ int verbosity = options[VERBOSE].count(); 
+\end{DoxyCode}
+ 
+\item \-Iterate over all -\/-\/file=$<$fname$>$ arguments\-: 
+\begin{DoxyCode}
+ for (Option* opt = options[FILE]; opt; opt = opt->next())
+   fname = opt->arg; ... 
+\end{DoxyCode}
+ 
+\item \-If you really want to, you can still process all arguments in order\-: 
+\begin{DoxyCode}
+   for (int i = 0; i < p.optionsCount(); ++i) {
+     Option& opt = buffer[i];
+     switch(opt.index()) {
+       case HELP:    ...
+       case VERBOSE: ...
+       case FILE:    fname = opt.arg; ...
+       case UNKNOWN: ...
+\end{DoxyCode}
+ 
+\end{DoxyItemize}
+\end{DoxyItemize}\par
+ \-Despite these features the code size remains tiny. \-It is smaller than \href{http://uclibc.org}{\tt u\-Clibc}'s \-G\-N\-U getopt() and just a couple 100 bytes larger than u\-Clibc's \-S\-U\-Sv3 getopt(). \par
+ (\-This does not include the usage formatter, of course. \-But you don't have to use that.)
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{\-Download\-:}
+\-Tarball with examples and test programs\-: \href{http://sourceforge.net/projects/optionparser/files/optionparser-1.3.tar.gz/download}{\tt optionparser-\/1.\-3.\-tar.\-gz} \par
+ \-Just the header (this is all you really need)\-: \href{http://optionparser.sourceforge.net/optionparser.h}{\tt optionparser.\-h}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{\-Changelog\-:}
+{\bfseries \-Version 1.\-3\-:} \-Compatible with \-Microsoft \-Visual \-C++. \par
+ {\bfseries \-Version 1.\-2\-:} \-Added \hyperlink{classoption_1_1_option_a3aa2957b19ad5815873441b415d56050}{\-Option\-:\-:namelen} and removed the extraction of short option characters into a special buffer. \par
+ \-Changed \hyperlink{structoption_1_1_arg_aadb5316ecbc9eb0a7f0019d14bf35ad0}{\-Arg\-:\-:\-Optional} to accept arguments if they are attached rather than separate. \-This is what \-G\-N\-U getopt() does and how \-P\-O\-S\-I\-X recommends utilities should interpret their arguments.\par
+ {\bfseries \-Version 1.\-1\-:} \-Optional mode with argument reordering as done by \-G\-N\-U getopt(), so that options and non-\/options can be mixed. \-See \hyperlink{classoption_1_1_parser_a6e0b5778d1cfbd6cd51240e74d01e138}{\-Parser\-:\-:parse()}.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{\-Feedback\-:}
+\-Send questions, bug reports, feature requests etc. to\-: {\ttfamily {\bfseries optionparser-\/feedback~(a)~lists.\-sourceforge.\-net}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{\-Example program\-:}
+(\-Note\-: {\ttfamily option\-:}\-:$\ast$ identifiers are links that take you to their documentation.) 
+\begin{DoxyCode}
+ #include <iostream>
+ #include "optionparser.h"
+
+ enum  optionIndex { UNKNOWN, HELP, PLUS };
+ const option::Descriptor usage[] =
+ {
+  {UNKNOWN, 0,"" , ""    ,option::Arg::None, "USAGE: example [options]\n\n"
+                                             "Options:" },
+  {HELP,    0,"" , "help",option::Arg::None, "  --help  \tPrint usage and exit.
+      " },
+  {PLUS,    0,"p", "plus",option::Arg::None, "  --plus, -p  \tIncrement count."
+       },
+  {UNKNOWN, 0,"" ,  ""   ,option::Arg::None, "\nExamples:\n"
+                                             "  example --unknown --
+       --this_is_no_option\n"
+                                             "  example -unk --plus -ppp file1
+       file2\n" },
+  {0,0,0,0,0,0}
+ };
+
+ int main(int argc, char* argv[])
+ {
+   argc-=(argc>0); argv+=(argc>0); // skip program name argv[0] if present
+   option::Stats  stats(usage, argc, argv);
+   option::Option options[stats.options_max], buffer[stats.buffer_max];
+   option::Parser parse(usage, argc, argv, options, buffer);
+
+   if (parse.error())
+     return 1;
+
+   if (options[HELP] || argc == 0) {
+     option::printUsage(std::cout, usage);
+     return 0;
+   }
+
+   std::cout << "--plus count: " <<
+     options[PLUS].count() << "\n";
+
+   for (option::Option* opt = options[UNKNOWN]; opt; opt = opt->next())
+     std::cout << "Unknown option: " << opt->name << "\n";
+
+   for (int i = 0; i < parse.nonOptionsCount(); ++i)
+     std::cout << "Non-option #" << i << ": " << parse.nonOption(i) << "\n";
+ }
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{\-Option syntax\-:}
+\begin{DoxyItemize}
+\item \-The \-Lean \-Mean \-C++ \-Option \-Parser follows \-P\-O\-S\-I\-X {\ttfamily getopt()} conventions and supports \-G\-N\-U-\/style {\ttfamily getopt\-\_\-long()} long options as well as \-Perl-\/style single-\/minus long options ({\ttfamily getopt\-\_\-long\-\_\-only()}). \item short options have the format {\ttfamily -\/\-X} where {\ttfamily \-X} is any character that fits in a char. \item short options can be grouped, i.\-e. {\ttfamily -\/\-X -\/\-Y} is equivalent to {\ttfamily -\/\-X\-Y}. \item a short option may take an argument either separate ({\ttfamily -\/\-X foo}) or attached ({\ttfamily -\/\-Xfoo}). \-You can make the parser accept the additional format {\ttfamily -\/\-X=foo} by registering {\ttfamily \-X} as a long option (in addition to being a short option) and enabling single-\/minus long options. \item an argument-\/taking short option may be grouped if it is the last in the group, e.\-g. {\ttfamily -\/\-A\-B\-C\-Xfoo} or {\ttfamily  -\/\-A\-B\-C\-X foo } ({\ttfamily foo} is the argument to the {\ttfamily -\/\-X} option). \item a lone minus character {\ttfamily '-\/'} is not treated as an option. \-It is customarily used where a file name is expected to refer to stdin or stdout. \item long options have the format {\ttfamily -\/-\/option-\/name}. \item the option-\/name of a long option can be anything and include any characters. \-Even {\ttfamily =} characters will work, but don't do that. \item \mbox{[}optional\mbox{]} long options may be abbreviated as long as the abbreviation is unambiguous. \-You can set a minimum length for abbreviations. \item \mbox{[}optional\mbox{]} long options may begin with a single minus. \-The double minus form is always accepted, too. \item a long option may take an argument either separate ({\ttfamily  -\/-\/option arg }) or attached ({\ttfamily  -\/-\/option=arg }). \-In the attached form the equals sign is mandatory. \item an empty string can be passed as an attached long option argument\-: {\ttfamily  -\/-\/option-\/name= }. \-Note the distinction between an empty string as argument and no argument at all. \item an empty string is permitted as separate argument to both long and short options. \item \-Arguments to both short and long options may start with a {\ttfamily '-\/'} character. \-E.\-g. {\ttfamily  -\/\-X-\/\-X }, {\ttfamily -\/\-X -\/\-X} or {\ttfamily  -\/-\/long-\/\-X=-\/\-X }. \-If {\ttfamily -\/\-X} and {\ttfamily -\/-\/long-\/\-X} take an argument, that argument will be {\ttfamily \char`\"{}-\/\-X\char`\"{}} in all 3 cases. \item \-If using the built-\/in \hyperlink{structoption_1_1_arg_aadb5316ecbc9eb0a7f0019d14bf35ad0}{\-Arg\-:\-:\-Optional}, optional arguments must be attached. \item the special option {\ttfamily -\/-\/} (i.\-e. without a name) terminates the list of options. \-Everything that follows is a non-\/option argument, even if it starts with a {\ttfamily '-\/'} character. \-The {\ttfamily -\/-\/} itself will not appear in the parse results. \item the first argument that doesn't start with {\ttfamily '-\/'} or {\ttfamily '-\/-\/'} and does not belong to a preceding argument-\/taking option, will terminate the option list and is the first non-\/option argument. \-All following command line arguments are treated as non-\/option arguments, even if they start with {\ttfamily '-\/'} . \par
+ \-N\-O\-T\-E\-: \-This behaviour is mandated by \-P\-O\-S\-I\-X, but \-G\-N\-U getopt() only honours this if it is explicitly requested (e.\-g. by setting \-P\-O\-S\-I\-X\-L\-Y\-\_\-\-C\-O\-R\-R\-E\-C\-T). \par
+ \-You can enable the \-G\-N\-U behaviour by passing {\ttfamily true} as first argument to e.\-g. \hyperlink{classoption_1_1_parser_a6e0b5778d1cfbd6cd51240e74d01e138}{\-Parser\-:\-:parse()}. \item \-Arguments that look like options (i.\-e. {\ttfamily '-\/'} followed by at least 1 character) but aren't, are \-N\-O\-T treated as non-\/option arguments. \-They are treated as unknown options and are collected into a list of unknown options for error reporting. \par
+ \-This means that in order to pass a first non-\/option argument beginning with the minus character it is required to use the {\ttfamily -\/-\/} special option, e.\-g. 
+\begin{DoxyCode}
+     program -x -- --strange-filename
+\end{DoxyCode}
+ \-In this example, {\ttfamily -\/-\/strange-\/filename} is a non-\/option argument. \-If the {\ttfamily -\/-\/} were omitted, it would be treated as an unknown option. \par
+ \-See \hyperlink{structoption_1_1_descriptor_a470c449dfa894c9bfda2dae026142b4b}{option\-::\-Descriptor\-::longopt} for information on how to collect unknown options. \end{DoxyItemize}
+
+\end{DoxyParagraph}

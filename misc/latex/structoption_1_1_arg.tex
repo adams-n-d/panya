@@ -1,0 +1,105 @@
+\hypertarget{structoption_1_1_arg}{\section{option\-:\-:\-Arg \-Struct \-Reference}
+\label{structoption_1_1_arg}\index{option\-::\-Arg@{option\-::\-Arg}}
+}
+
+
+\-Functions for checking the validity of option arguments.  
+
+
+
+
+{\ttfamily \#include $<$optionparser.\-h$>$}
+
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structoption_1_1_arg_a7fc01987899c91c6b6a1be5711a46e22}{static \hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9}{\-Arg\-Status} \hyperlink{structoption_1_1_arg_a7fc01987899c91c6b6a1be5711a46e22}{\-None} (const \hyperlink{classoption_1_1_option}{\-Option} \&, bool)}\label{structoption_1_1_arg_a7fc01987899c91c6b6a1be5711a46e22}
+
+\begin{DoxyCompactList}\small\item\em \-For options that don't take an argument\-: \-Returns \-A\-R\-G\-\_\-\-N\-O\-N\-E. \end{DoxyCompactList}\item 
+\hypertarget{structoption_1_1_arg_aadb5316ecbc9eb0a7f0019d14bf35ad0}{static \hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9}{\-Arg\-Status} \hyperlink{structoption_1_1_arg_aadb5316ecbc9eb0a7f0019d14bf35ad0}{\-Optional} (const \hyperlink{classoption_1_1_option}{\-Option} \&option, bool)}\label{structoption_1_1_arg_aadb5316ecbc9eb0a7f0019d14bf35ad0}
+
+\begin{DoxyCompactList}\small\item\em \-Returns \-A\-R\-G\-\_\-\-O\-K if the argument is attached and \-A\-R\-G\-\_\-\-I\-G\-N\-O\-R\-E otherwise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Functions for checking the validity of option arguments. 
+
+\-Every \hyperlink{classoption_1_1_option}{\-Option} has such a function assigned in its \hyperlink{structoption_1_1_descriptor}{\-Descriptor}. 
+\begin{DoxyCode}
+ Descriptor usage[] = { {UNKNOWN, 0, "", "", Arg::None, ""}, ... };
+\end{DoxyCode}
+
+
+\-A \-Check\-Arg function has the following signature\-: 
+\begin{DoxyCode}
+ ArgStatus CheckArg(const Option& option, bool msg); 
+\end{DoxyCode}
+
+
+\-It is used to check if a potential argument would be acceptable for the option. \-It will even be called if there is no argument. \-In that case {\ttfamily option.\-arg} will be {\ttfamily \-N\-U\-L\-L}.
+
+\-If {\ttfamily msg} is {\ttfamily true} and the function determines that an argument is not acceptable and that this is a fatal error, it should output a message to the user before returning \hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9a9528e32563b795bd2930b12d0a5e382d}{\-A\-R\-G\-\_\-\-I\-L\-L\-E\-G\-A\-L}. \-If {\ttfamily msg} is {\ttfamily false} the function should remain silent (or you will get duplicate messages).
+
+\-See \hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9}{\-Arg\-Status} for the meaning of the return values.
+
+\-While you can provide your own functions, often the following pre-\/defined checks (which never return \hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9a9528e32563b795bd2930b12d0a5e382d}{\-A\-R\-G\-\_\-\-I\-L\-L\-E\-G\-A\-L}) will suffice\-:
+
+\begin{DoxyItemize}
+\item {\ttfamily \hyperlink{structoption_1_1_arg_a7fc01987899c91c6b6a1be5711a46e22}{\-Arg\-::\-None}} \-For options that don't take an argument\-: \-Returns \-A\-R\-G\-\_\-\-N\-O\-N\-E.  \item {\ttfamily \hyperlink{structoption_1_1_arg_aadb5316ecbc9eb0a7f0019d14bf35ad0}{\-Arg\-::\-Optional}} \-Returns \-A\-R\-G\-\_\-\-O\-K if the argument is attached and \-A\-R\-G\-\_\-\-I\-G\-N\-O\-R\-E otherwise.  \end{DoxyItemize}
+
+
+\-The following example code can serve as starting place for writing your own more complex \-Check\-Arg functions\-: 
+\begin{DoxyCode}
+ struct Arg: public option::Arg
+ {
+   static void printError(const char* msg1, const option::Option& opt, const 
+      char* msg2)
+   {
+     fprintf(stderr, "ERROR: %s", msg1);
+     fwrite(opt.name, opt.namelen, 1, stderr);
+     fprintf(stderr, "%s", msg2);
+   }
+
+   static option::ArgStatus Unknown(const option::Option& option, bool msg)
+   {
+     if (msg) printError("Unknown option '", option, "'\n");
+     return option::ARG_ILLEGAL;
+   }
+
+   static option::ArgStatus Required(const option::Option& option, bool msg)
+   {
+     if (option.arg != 0)
+       return option::ARG_OK;
+
+     if (msg) printError("Option '", option, "' requires an argument\n");
+     return option::ARG_ILLEGAL;
+   }
+
+   static option::ArgStatus NonEmpty(const option::Option& option, bool msg)
+   {
+     if (option.arg != 0 && option.arg[0] != 0)
+       return option::ARG_OK;
+
+     if (msg) printError("Option '", option, "' requires a non-empty argument\n
+      ");
+     return option::ARG_ILLEGAL;
+   }
+
+   static option::ArgStatus Numeric(const option::Option& option, bool msg)
+   {
+     char* endptr = 0;
+     if (option.arg != 0 && strtol(option.arg, &endptr, 10)){};
+     if (endptr != option.arg && *endptr == 0)
+       return option::ARG_OK;
+
+     if (msg) printError("Option '", option, "' requires a numeric argument\n")
+      ;
+     return option::ARG_ILLEGAL;
+   }
+ };
+\end{DoxyCode}
+ 
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{optionparser_8h}{optionparser.\-h}\end{DoxyCompactItemize}

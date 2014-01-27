@@ -1,0 +1,309 @@
+\hypertarget{namespaceoption}{\section{option \-Namespace \-Reference}
+\label{namespaceoption}\index{option@{option}}
+}
+
+
+\-The namespace of \-The \-Lean \-Mean \-C++ \hyperlink{classoption_1_1_option}{\-Option} \hyperlink{classoption_1_1_parser}{\-Parser}.  
+
+
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structoption_1_1_descriptor}{\-Descriptor}
+\begin{DoxyCompactList}\small\item\em \-Describes an option, its help text (usage) and how it should be parsed. \end{DoxyCompactList}\item 
+class \hyperlink{classoption_1_1_option}{\-Option}
+\begin{DoxyCompactList}\small\item\em \-A parsed option from the command line together with its argument if it has one. \end{DoxyCompactList}\item 
+struct \hyperlink{structoption_1_1_arg}{\-Arg}
+\begin{DoxyCompactList}\small\item\em \-Functions for checking the validity of option arguments. \end{DoxyCompactList}\item 
+struct \hyperlink{structoption_1_1_stats}{\-Stats}
+\begin{DoxyCompactList}\small\item\em \-Determines the minimum lengths of the buffer and options arrays used for \hyperlink{classoption_1_1_parser}{\-Parser}. \end{DoxyCompactList}\item 
+class \hyperlink{classoption_1_1_parser}{\-Parser}
+\begin{DoxyCompactList}\small\item\em \-Checks argument vectors for validity and parses them into data structures that are easier to work with. \end{DoxyCompactList}\item 
+struct \hyperlink{structoption_1_1_print_usage_implementation}{\-Print\-Usage\-Implementation}
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9}{\-Arg\-Status}($\ast$ \hyperlink{namespaceoption_a4afb7f04597f34439679509baf4b6d39}{\-Check\-Arg} )(const \hyperlink{classoption_1_1_option}{\-Option} \&option, bool msg)
+\begin{DoxyCompactList}\small\item\em \-Signature of functions that check if an argument is valid for a certain type of option. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9}{\-Arg\-Status} \{ \hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9a353903b042e8eb0aa2f60c0043a58a7e}{\-A\-R\-G\-\_\-\-N\-O\-N\-E}, 
+\hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9a445e08cb1747e5a22929e7ef2da43b55}{\-A\-R\-G\-\_\-\-O\-K}, 
+\hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9a83e0837c79c957525918111d33cab3a9}{\-A\-R\-G\-\_\-\-I\-G\-N\-O\-R\-E}, 
+\hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9a9528e32563b795bd2930b12d0a5e382d}{\-A\-R\-G\-\_\-\-I\-L\-L\-E\-G\-A\-L}
+ \}
+\begin{DoxyCompactList}\small\item\em \-Possible results when checking if an argument is valid for a certain option. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename O\-Stream $>$ }\\void \hyperlink{namespaceoption_afc8bb7e040a98a0b33ff1ce9da1be0d1}{print\-Usage} (\-O\-Stream \&prn, const \hyperlink{structoption_1_1_descriptor}{\-Descriptor} usage\mbox{[}$\,$\mbox{]}, int width=80, int last\-\_\-column\-\_\-min\-\_\-percent=50, int last\-\_\-column\-\_\-own\-\_\-line\-\_\-max\-\_\-percent=75)
+\begin{DoxyCompactList}\small\item\em \-Outputs a nicely formatted usage string with support for multi-\/column formatting and line-\/wrapping. \end{DoxyCompactList}\item 
+\hypertarget{namespaceoption_a846de0735717c8402b76d14f0a7a4430}{{\footnotesize template$<$typename Function $>$ }\\void {\bfseries print\-Usage} (\-Function $\ast$prn, const \hyperlink{structoption_1_1_descriptor}{\-Descriptor} usage\mbox{[}$\,$\mbox{]}, int width=80, int last\-\_\-column\-\_\-min\-\_\-percent=50, int last\-\_\-column\-\_\-own\-\_\-line\-\_\-max\-\_\-percent=75)}\label{namespaceoption_a846de0735717c8402b76d14f0a7a4430}
+
+\item 
+\hypertarget{namespaceoption_a86e12a019c4da81e5031901af9c800cc}{{\footnotesize template$<$typename Temporary $>$ }\\void {\bfseries print\-Usage} (const \-Temporary \&prn, const \hyperlink{structoption_1_1_descriptor}{\-Descriptor} usage\mbox{[}$\,$\mbox{]}, int width=80, int last\-\_\-column\-\_\-min\-\_\-percent=50, int last\-\_\-column\-\_\-own\-\_\-line\-\_\-max\-\_\-percent=75)}\label{namespaceoption_a86e12a019c4da81e5031901af9c800cc}
+
+\item 
+\hypertarget{namespaceoption_a84764f72d05ba8480143043e3d56ad6a}{{\footnotesize template$<$typename Syscall $>$ }\\void {\bfseries print\-Usage} (\-Syscall $\ast$prn, int fd, const \hyperlink{structoption_1_1_descriptor}{\-Descriptor} usage\mbox{[}$\,$\mbox{]}, int width=80, int last\-\_\-column\-\_\-min\-\_\-percent=50, int last\-\_\-column\-\_\-own\-\_\-line\-\_\-max\-\_\-percent=75)}\label{namespaceoption_a84764f72d05ba8480143043e3d56ad6a}
+
+\item 
+\hypertarget{namespaceoption_a27bfa29dc37bb1bfc5e0b891509e5881}{{\footnotesize template$<$typename Function , typename Stream $>$ }\\void {\bfseries print\-Usage} (\-Function $\ast$prn, \-Stream $\ast$stream, const \hyperlink{structoption_1_1_descriptor}{\-Descriptor} usage\mbox{[}$\,$\mbox{]}, int width=80, int last\-\_\-column\-\_\-min\-\_\-percent=50, int last\-\_\-column\-\_\-own\-\_\-line\-\_\-max\-\_\-percent=75)}\label{namespaceoption_a27bfa29dc37bb1bfc5e0b891509e5881}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-The namespace of \-The \-Lean \-Mean \-C++ \hyperlink{classoption_1_1_option}{\-Option} \hyperlink{classoption_1_1_parser}{\-Parser}. 
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{namespaceoption_a4afb7f04597f34439679509baf4b6d39}{\index{option@{option}!\-Check\-Arg@{\-Check\-Arg}}
+\index{\-Check\-Arg@{\-Check\-Arg}!option@{option}}
+\subsubsection[{\-Check\-Arg}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \-Arg\-Status}($\ast$ {\bf option\-::\-Check\-Arg})(const {\bf \-Option} \&option, bool msg)}}\label{namespaceoption_a4afb7f04597f34439679509baf4b6d39}
+
+
+\-Signature of functions that check if an argument is valid for a certain type of option. 
+
+\-Every \hyperlink{classoption_1_1_option}{\-Option} has such a function assigned in its \hyperlink{structoption_1_1_descriptor}{\-Descriptor}. 
+\begin{DoxyCode}
+ Descriptor usage[] = { {UNKNOWN, 0, "", "", Arg::None, ""}, ... };
+\end{DoxyCode}
+
+
+\-A \-Check\-Arg function has the following signature\-: 
+\begin{DoxyCode}
+ ArgStatus CheckArg(const Option& option, bool msg); 
+\end{DoxyCode}
+
+
+\-It is used to check if a potential argument would be acceptable for the option. \-It will even be called if there is no argument. \-In that case {\ttfamily option.\-arg} will be {\ttfamily \-N\-U\-L\-L}.
+
+\-If {\ttfamily msg} is {\ttfamily true} and the function determines that an argument is not acceptable and that this is a fatal error, it should output a message to the user before returning \hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9a9528e32563b795bd2930b12d0a5e382d}{\-A\-R\-G\-\_\-\-I\-L\-L\-E\-G\-A\-L}. \-If {\ttfamily msg} is {\ttfamily false} the function should remain silent (or you will get duplicate messages).
+
+\-See \hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9}{\-Arg\-Status} for the meaning of the return values.
+
+\-While you can provide your own functions, often the following pre-\/defined checks (which never return \hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9a9528e32563b795bd2930b12d0a5e382d}{\-A\-R\-G\-\_\-\-I\-L\-L\-E\-G\-A\-L}) will suffice\-:
+
+\begin{DoxyItemize}
+\item {\ttfamily \hyperlink{structoption_1_1_arg_a7fc01987899c91c6b6a1be5711a46e22}{\-Arg\-::\-None}} \-For options that don't take an argument\-: \-Returns \-A\-R\-G\-\_\-\-N\-O\-N\-E.  \item {\ttfamily \hyperlink{structoption_1_1_arg_aadb5316ecbc9eb0a7f0019d14bf35ad0}{\-Arg\-::\-Optional}} \-Returns \-A\-R\-G\-\_\-\-O\-K if the argument is attached and \-A\-R\-G\-\_\-\-I\-G\-N\-O\-R\-E otherwise.  \end{DoxyItemize}
+
+
+\subsection{\-Enumeration \-Type \-Documentation}
+\hypertarget{namespaceoption_aee8c76a07877335762631491e7a5a1a9}{\index{option@{option}!\-Arg\-Status@{\-Arg\-Status}}
+\index{\-Arg\-Status@{\-Arg\-Status}!option@{option}}
+\subsubsection[{\-Arg\-Status}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf option\-::\-Arg\-Status}}}\label{namespaceoption_aee8c76a07877335762631491e7a5a1a9}
+
+
+\-Possible results when checking if an argument is valid for a certain option. 
+
+\-In the case that no argument is provided for an option that takes an optional argument, return codes {\ttfamily \-A\-R\-G\-\_\-\-O\-K} and {\ttfamily \-A\-R\-G\-\_\-\-I\-G\-N\-O\-R\-E} are equivalent. \begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-A\-R\-G\-\_\-\-N\-O\-N\-E@{\-A\-R\-G\-\_\-\-N\-O\-N\-E}!option@{option}}\index{option@{option}!\-A\-R\-G\-\_\-\-N\-O\-N\-E@{\-A\-R\-G\-\_\-\-N\-O\-N\-E}}\item[{\em 
+\hypertarget{namespaceoption_aee8c76a07877335762631491e7a5a1a9a353903b042e8eb0aa2f60c0043a58a7e}{\-A\-R\-G\-\_\-\-N\-O\-N\-E}\label{namespaceoption_aee8c76a07877335762631491e7a5a1a9a353903b042e8eb0aa2f60c0043a58a7e}
+}]\-The option does not take an argument. \index{\-A\-R\-G\-\_\-\-O\-K@{\-A\-R\-G\-\_\-\-O\-K}!option@{option}}\index{option@{option}!\-A\-R\-G\-\_\-\-O\-K@{\-A\-R\-G\-\_\-\-O\-K}}\item[{\em 
+\hypertarget{namespaceoption_aee8c76a07877335762631491e7a5a1a9a445e08cb1747e5a22929e7ef2da43b55}{\-A\-R\-G\-\_\-\-O\-K}\label{namespaceoption_aee8c76a07877335762631491e7a5a1a9a445e08cb1747e5a22929e7ef2da43b55}
+}]\-The argument is acceptable for the option. \index{\-A\-R\-G\-\_\-\-I\-G\-N\-O\-R\-E@{\-A\-R\-G\-\_\-\-I\-G\-N\-O\-R\-E}!option@{option}}\index{option@{option}!\-A\-R\-G\-\_\-\-I\-G\-N\-O\-R\-E@{\-A\-R\-G\-\_\-\-I\-G\-N\-O\-R\-E}}\item[{\em 
+\hypertarget{namespaceoption_aee8c76a07877335762631491e7a5a1a9a83e0837c79c957525918111d33cab3a9}{\-A\-R\-G\-\_\-\-I\-G\-N\-O\-R\-E}\label{namespaceoption_aee8c76a07877335762631491e7a5a1a9a83e0837c79c957525918111d33cab3a9}
+}]\-The argument is not acceptable but that's non-\/fatal because the option's argument is optional. \index{\-A\-R\-G\-\_\-\-I\-L\-L\-E\-G\-A\-L@{\-A\-R\-G\-\_\-\-I\-L\-L\-E\-G\-A\-L}!option@{option}}\index{option@{option}!\-A\-R\-G\-\_\-\-I\-L\-L\-E\-G\-A\-L@{\-A\-R\-G\-\_\-\-I\-L\-L\-E\-G\-A\-L}}\item[{\em 
+\hypertarget{namespaceoption_aee8c76a07877335762631491e7a5a1a9a9528e32563b795bd2930b12d0a5e382d}{\-A\-R\-G\-\_\-\-I\-L\-L\-E\-G\-A\-L}\label{namespaceoption_aee8c76a07877335762631491e7a5a1a9a9528e32563b795bd2930b12d0a5e382d}
+}]\-The argument is not acceptable and that's fatal. \end{description}
+\end{Desc}
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{namespaceoption_afc8bb7e040a98a0b33ff1ce9da1be0d1}{\index{option@{option}!print\-Usage@{print\-Usage}}
+\index{print\-Usage@{print\-Usage}!option@{option}}
+\subsubsection[{print\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename O\-Stream $>$ void {\bf option\-::print\-Usage} (
+\begin{DoxyParamCaption}
+\item[{\-O\-Stream \&}]{prn, }
+\item[{const \-Descriptor}]{usage\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{width = {\ttfamily 80}, }
+\item[{int}]{last\-\_\-column\-\_\-min\-\_\-percent = {\ttfamily 50}, }
+\item[{int}]{last\-\_\-column\-\_\-own\-\_\-line\-\_\-max\-\_\-percent = {\ttfamily 75}}
+\end{DoxyParamCaption}
+)}}\label{namespaceoption_afc8bb7e040a98a0b33ff1ce9da1be0d1}
+
+
+\-Outputs a nicely formatted usage string with support for multi-\/column formatting and line-\/wrapping. 
+
+\hyperlink{namespaceoption_afc8bb7e040a98a0b33ff1ce9da1be0d1}{print\-Usage()} takes the {\ttfamily help} texts of a \hyperlink{structoption_1_1_descriptor}{\-Descriptor}\mbox{[}\mbox{]} array and formats them into a usage message, wrapping lines to achieve the desired output width.
+
+{\bfseries \-Table formatting\-:}
+
+\-Aside from plain strings which are simply line-\/wrapped, the usage may contain tables. \-Tables are used to align elements in the output.
+
+
+\begin{DoxyCode}
+ // Without a table. The explanatory texts are not aligned.
+ -c, --create  |Creates something.
+ -k, --kill  |Destroys something.
+
+ // With table formatting. The explanatory texts are aligned.
+ -c, --create  |Creates something.
+ -k, --kill    |Destroys something.
+\end{DoxyCode}
+
+
+\-Table formatting removes the need to pad help texts manually with spaces to achieve alignment. \-To create a table, simply insert $\backslash$t (tab) characters to separate the cells within a row.
+
+
+\begin{DoxyCode}
+ const option::Descriptor usage[] = {
+ {..., "-c, --create  \tCreates something." },
+ {..., "-k, --kill  \tDestroys something." }, ...
+\end{DoxyCode}
+
+
+\-Note that you must include the minimum amount of space desired between cells yourself. \-Table formatting will insert further spaces as needed to achieve alignment.
+
+\-You can insert line breaks within cells by using $\backslash$v (vertical tab).
+
+
+\begin{DoxyCode}
+ const option::Descriptor usage[] = {
+ {..., "-c,\v--create  \tCreates\vsomething." },
+ {..., "-k,\v--kill  \tDestroys\vsomething." }, ...
+
+ // results in
+
+ -c,       Creates
+ --create  something.
+ -k,       Destroys
+ --kill    something.
+\end{DoxyCode}
+
+
+\-You can mix lines that do not use $\backslash$t or $\backslash$v with those that do. \-The plain lines will not mess up the table layout. \-Alignment of the table columns will be maintained even across these interjections.
+
+
+\begin{DoxyCode}
+ const option::Descriptor usage[] = {
+ {..., "-c, --create  \tCreates something." },
+ {..., "----------------------------------" },
+ {..., "-k, --kill  \tDestroys something." }, ...
+
+ // results in
+
+ -c, --create  Creates something.
+ ----------------------------------
+ -k, --kill    Destroys something.
+\end{DoxyCode}
+
+
+\-You can have multiple tables within the same usage whose columns are aligned independently. \-Simply insert a dummy \hyperlink{structoption_1_1_descriptor}{\-Descriptor} with {\ttfamily help==0}.
+
+
+\begin{DoxyCode}
+ const option::Descriptor usage[] = {
+ {..., "Long options:" },
+ {..., "--very-long-option  \tDoes something long." },
+ {..., "--ultra-super-mega-long-option  \tTakes forever to complete." },
+ {..., 0 }, // ---------- table break -----------
+ {..., "Short options:" },
+ {..., "-s  \tShort." },
+ {..., "-q  \tQuick." }, ...
+
+ // results in
+
+ Long options:
+ --very-long-option              Does something long.
+ --ultra-super-mega-long-option  Takes forever to complete.
+ Short options:
+ -s  Short.
+ -q  Quick.
+
+ // Without the table break it would be
+
+ Long options:
+ --very-long-option              Does something long.
+ --ultra-super-mega-long-option  Takes forever to complete.
+ Short options:
+ -s                              Short.
+ -q                              Quick.
+\end{DoxyCode}
+
+
+{\bfseries \-Output methods\-:}
+
+\-Because \-The\-Lean\-Mean\-C++\-Option parser is freestanding, you have to provide the means for output in the first argument(s) to \hyperlink{namespaceoption_afc8bb7e040a98a0b33ff1ce9da1be0d1}{print\-Usage()}. \-Because \hyperlink{namespaceoption_afc8bb7e040a98a0b33ff1ce9da1be0d1}{print\-Usage()} is implemented as a set of template functions, you have great flexibility in your choice of output method. \-The following example demonstrates typical uses. \-Anything that's similar enough will work.
+
+
+\begin{DoxyCode}
+ #include <unistd.h>  // write()
+ #include <iostream>  // cout
+ #include <sstream>   // ostringstream
+ #include <cstdio>    // fwrite()
+ using namespace std;
+
+ void my_write(const char* str, int size) {
+   fwrite(str, size, 1, stdout);
+ }
+
+ struct MyWriter {
+   void write(const char* buf, size_t size) const {
+      fwrite(str, size, 1, stdout);
+   }
+ };
+
+ struct MyWriteFunctor {
+   void operator()(const char* buf, size_t size) {
+      fwrite(str, size, 1, stdout);
+   }
+ };
+ ...
+ printUsage(my_write, usage);    // custom write function
+ printUsage(MyWriter(), usage);  // temporary of a custom class
+ MyWriter writer;
+ printUsage(writer, usage);      // custom class object
+ MyWriteFunctor wfunctor;
+ printUsage(&wfunctor, usage);   // custom functor
+ printUsage(write, 1, usage);    // write() to file descriptor 1
+ printUsage(cout, usage);        // an ostream&
+ printUsage(fwrite, stdout, usage);  // fwrite() to stdout
+ ostringstream sstr;
+ printUsage(sstr, usage);        // an ostringstream&
+\end{DoxyCode}
+
+
+\begin{DoxyParagraph}{\-Notes\-:}
+\begin{DoxyItemize}
+\item the {\ttfamily write()} method of a class that is to be passed as a temporary as {\ttfamily \-My\-Writer()} is in the example, must be a {\ttfamily const} method, because temporary objects are passed as const reference. \-This only applies to temporary objects that are created and destroyed in the same statement. \-If you create an object like {\ttfamily writer} in the example, this restriction does not apply. \item a functor like {\ttfamily \-My\-Write\-Functor} in the example must be passed as a pointer. \-This differs from the way functors are passed to e.\-g. the \-S\-T\-L algorithms. \item \-All \hyperlink{namespaceoption_afc8bb7e040a98a0b33ff1ce9da1be0d1}{print\-Usage()} templates are tiny wrappers around a shared non-\/template implementation. \-So there's no penalty for using different versions in the same program. \item \hyperlink{namespaceoption_afc8bb7e040a98a0b33ff1ce9da1be0d1}{print\-Usage()} always interprets \hyperlink{structoption_1_1_descriptor_a9045b19311533e1b8a08645d57149c79}{\-Descriptor\-::help} as \-U\-T\-F-\/8 and always produces \-U\-T\-F-\/8-\/encoded output. \-If your system uses a different charset, you must do your own conversion. \-You may also need to change the font of the console to see non-\/\-A\-S\-C\-I\-I characters properly. \-This is particularly true for \-Windows. \item {\bfseries \-Security} {\bfseries warning\-:} \-Do not insert untrusted strings (such as user-\/supplied arguments) into the usage. \hyperlink{namespaceoption_afc8bb7e040a98a0b33ff1ce9da1be0d1}{print\-Usage()} has no protection against malicious \-U\-T\-F-\/8 sequences.\end{DoxyItemize}
+
+\end{DoxyParagraph}
+
+\begin{DoxyParams}{\-Parameters}
+{\em prn} & \-The output method to use. \-See the examples above. \\
+\hline
+{\em usage} & the \hyperlink{structoption_1_1_descriptor}{\-Descriptor}\mbox{[}\mbox{]} array whose {\ttfamily help} texts will be formatted. \\
+\hline
+{\em width} & the maximum number of characters per output line. \-Note that this number is in actual characters, not bytes. \hyperlink{namespaceoption_afc8bb7e040a98a0b33ff1ce9da1be0d1}{print\-Usage()} supports \-U\-T\-F-\/8 in {\ttfamily help} and will count multi-\/byte \-U\-T\-F-\/8 sequences properly. \-Asian wide characters are counted as 2 characters. \\
+\hline
+{\em last\-\_\-column\-\_\-min\-\_\-percent} & (0-\/100) \-The minimum percentage of {\ttfamily width} that should be available for the last column (which typically contains the textual explanation of an option). \-If less space is available, the last column will be printed on its own line, indented according to {\ttfamily last\-\_\-column\-\_\-own\-\_\-line\-\_\-max\-\_\-percent}. \\
+\hline
+{\em last\-\_\-column\-\_\-own\-\_\-line\-\_\-max\-\_\-percent} & (0-\/100) \-If the last column is printed on its own line due to less than {\ttfamily last\-\_\-column\-\_\-min\-\_\-percent} of the width being available, then only {\ttfamily last\-\_\-column\-\_\-own\-\_\-line\-\_\-max\-\_\-percent} of the extra line(s) will be used for the last column's text. \-This ensures an indentation. \-See example below.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+ // width=20, last_column_min_percent=50 (i.e. last col. min. width=10)
+ --3456789 1234567890
+           1234567890
+
+ // width=20, last_column_min_percent=75 (i.e. last col. min. width=15)
+ // last_column_own_line_max_percent=75
+ --3456789
+      123456789012345
+      67890
+
+ // width=20, last_column_min_percent=75 (i.e. last col. min. width=15)
+ // last_column_own_line_max_percent=33 (i.e. max. 5)
+ --3456789
+                12345
+                67890
+                12345
+                67890
+\end{DoxyCode}
+ 

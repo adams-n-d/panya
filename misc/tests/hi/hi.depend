@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1378829961 source:/home/nda/code/sweng/hi/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1378830035 source:/home/nda/code/sweng/hello.h
+	<stdio.h>
+

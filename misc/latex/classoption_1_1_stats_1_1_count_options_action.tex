@@ -1,0 +1,47 @@
+\hypertarget{classoption_1_1_stats_1_1_count_options_action}{\section{option\-:\-:\-Stats\-:\-:\-Count\-Options\-Action \-Class \-Reference}
+\label{classoption_1_1_stats_1_1_count_options_action}\index{option\-::\-Stats\-::\-Count\-Options\-Action@{option\-::\-Stats\-::\-Count\-Options\-Action}}
+}
+
+
+\-Inherits \hyperlink{structoption_1_1_parser_1_1_action}{option\-::\-Parser\-::\-Action}.
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classoption_1_1_stats_1_1_count_options_action_a24a38b87ad129b0e12660bd2019ba284}{\-Count\-Options\-Action} (unsigned $\ast$buffer\-\_\-max\-\_\-)
+\item 
+bool \hyperlink{classoption_1_1_stats_1_1_count_options_action_a29ab8a68d0a30736b99b4d2e5dece489}{perform} (\hyperlink{classoption_1_1_option}{\-Option} \&)
+\begin{DoxyCompactList}\small\item\em \-Called by \-Parser\-::workhorse() for each \hyperlink{classoption_1_1_option}{\-Option} that has been successfully parsed (including unknown options if they have a \hyperlink{structoption_1_1_descriptor}{\-Descriptor} whose \hyperlink{structoption_1_1_descriptor_aa5d675dba0214a4abd73007ff163cc67}{\-Descriptor\-::check\-\_\-arg} does not return \hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9a9528e32563b795bd2930b12d0a5e382d}{\-A\-R\-G\-\_\-\-I\-L\-L\-E\-G\-A\-L}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classoption_1_1_stats_1_1_count_options_action_a24a38b87ad129b0e12660bd2019ba284}{\index{option\-::\-Stats\-::\-Count\-Options\-Action@{option\-::\-Stats\-::\-Count\-Options\-Action}!\-Count\-Options\-Action@{\-Count\-Options\-Action}}
+\index{\-Count\-Options\-Action@{\-Count\-Options\-Action}!option::Stats::CountOptionsAction@{option\-::\-Stats\-::\-Count\-Options\-Action}}
+\subsubsection[{\-Count\-Options\-Action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf option\-::\-Stats\-::\-Count\-Options\-Action\-::\-Count\-Options\-Action} (
+\begin{DoxyParamCaption}
+\item[{unsigned $\ast$}]{buffer\-\_\-max\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classoption_1_1_stats_1_1_count_options_action_a24a38b87ad129b0e12660bd2019ba284}
+\-Creates a new \hyperlink{classoption_1_1_stats_1_1_count_options_action}{\-Count\-Options\-Action} that will increase {\ttfamily $\ast$buffer\-\_\-max\-\_\-} for each parsed \hyperlink{classoption_1_1_option}{\-Option}. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classoption_1_1_stats_1_1_count_options_action_a29ab8a68d0a30736b99b4d2e5dece489}{\index{option\-::\-Stats\-::\-Count\-Options\-Action@{option\-::\-Stats\-::\-Count\-Options\-Action}!perform@{perform}}
+\index{perform@{perform}!option::Stats::CountOptionsAction@{option\-::\-Stats\-::\-Count\-Options\-Action}}
+\subsubsection[{perform}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf option\-::\-Stats\-::\-Count\-Options\-Action\-::perform} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Option} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{classoption_1_1_stats_1_1_count_options_action_a29ab8a68d0a30736b99b4d2e5dece489}
+
+
+\-Called by \-Parser\-::workhorse() for each \hyperlink{classoption_1_1_option}{\-Option} that has been successfully parsed (including unknown options if they have a \hyperlink{structoption_1_1_descriptor}{\-Descriptor} whose \hyperlink{structoption_1_1_descriptor_aa5d675dba0214a4abd73007ff163cc67}{\-Descriptor\-::check\-\_\-arg} does not return \hyperlink{namespaceoption_aee8c76a07877335762631491e7a5a1a9a9528e32563b795bd2930b12d0a5e382d}{\-A\-R\-G\-\_\-\-I\-L\-L\-E\-G\-A\-L}. 
+
+\-Returns {\ttfamily false} iff a fatal error has occured and the parse should be aborted. 
+
+\-Reimplemented from \hyperlink{structoption_1_1_parser_1_1_action_a176b5f783bb35eb015b6d2c09422457d}{option\-::\-Parser\-::\-Action}.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{optionparser_8h}{optionparser.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1385488076 source:/home/bob/vidtrack/unittest/main.cpp
+	<stdio.h>
+	<opencv2/opencv.hpp>
+	<opencv2/highgui/highgui.hpp>
+	"project_IO.hpp"
+	"unittest++.h"
+	"UnitVid.h"
+
+1386343837 /home/bob/vidtrack/unittest/project_IO.hpp
+	<stdio.h>
+	<opencv2/opencv.hpp>
+	"trackingMethods.hpp"
+
+1385490107 /home/bob/vidtrack/unittest/trackingMethods.hpp
+	<stdio.h>
+	<opencv2/opencv.hpp>
+
+1385419843 /home/bob/vidtrack/unittest/unittest++.h
+	<stdio.h>
+	<opencv2/opencv.hpp>
+	<opencv2/highgui/highgui.hpp>
+
+1386345493 /home/bob/vidtrack/unittest/UnitVid.h
+	<stdio.h>
+	<opencv2/opencv.hpp>
+	<opencv2/highgui/highgui.hpp>
+

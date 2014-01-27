@@ -1,0 +1,66 @@
+# depslib dependency file v1.0
+1390206400 source:/home/nda/code/sweng/vidtrack/main.cpp
+	<stdio.h>
+	<opencv2/opencv.hpp>
+	<opencv2/highgui/highgui.hpp>
+	"project_IO.hpp"
+	<vector>
+	<string>
+	"optionparser.h"
+
+1382642123 /home/nda/code/sweng/vidtrack/readVideo.hpp
+	<stdio.h>
+	<opencv2/opencv.hpp>
+	"findLED.hpp"
+
+1382605068 /home/nda/code/sweng/vidtrack/findLED.hpp
+	<stdio.h>
+	<opencv2/opencv.hpp>
+
+1390207466 /home/nda/code/sweng/vidtrack/project_IO.hpp
+	<stdio.h>
+	<opencv2/opencv.hpp>
+	"trackingMethods.hpp"
+	<iostream>
+	<fstream>
+	<string>
+
+1387310706 /home/nda/code/sweng/vidtrack/trackingMethods.hpp
+	<stdio.h>
+	<opencv2/opencv.hpp>
+	<math.h>
+	"params.h"
+
+1386759446 /home/nda/code/sweng/vidtrack/params.h
+
+1389746874 /home/nda/code/sweng/vidtrack/optionparser.h
+	<intrin.h>
+
+1390827101 source:/home/nda/code/panya/cmd/main.cpp
+	<stdio.h>
+	<opencv2/opencv.hpp>
+	<opencv2/highgui/highgui.hpp>
+	"project_IO.hpp"
+	<vector>
+	<string>
+	"optionparser.h"
+
+1390827101 /home/nda/code/panya/cmd/project_IO.hpp
+	<stdio.h>
+	<opencv2/opencv.hpp>
+	"trackingMethods.hpp"
+	<iostream>
+	<fstream>
+	<string>
+
+1390827101 /home/nda/code/panya/cmd/trackingMethods.hpp
+	<stdio.h>
+	<opencv2/opencv.hpp>
+	<math.h>
+	"params.h"
+
+1390827101 /home/nda/code/panya/cmd/params.h
+
+1390827101 /home/nda/code/panya/cmd/optionparser.h
+	<intrin.h>
+
